@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.annotation.Rollback;
 
-import com.mmtspl.bean.User;
+import com.mmtspl.bean.Users;
 import com.mmtspl.repository.UserRepository;
 
 @DataJpaTest
@@ -27,7 +27,7 @@ public class UserRepositoryTests {
 	
 	@Test
 	public void testCreateUser() {
-		User user = new User();
+		Users user = new Users();
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String encodedPassword = null;
@@ -37,9 +37,9 @@ public class UserRepositoryTests {
 		user.setFirstName("root");
 		user.setLastName("admin");
 		
-		User savedUser = repo.save(user);
+		Users savedUser = repo.save(user);
 		
-		User existUser = entityManager.find(User.class, savedUser.getId());
+		Users existUser = entityManager.find(Users.class, savedUser.getId());
 		
 		assertThat(user.getEmail()).isEqualTo(existUser.getEmail());
 		
@@ -48,7 +48,7 @@ public class UserRepositoryTests {
 	@Test
 	public void testFindByEmail() {
 		String email = "root.admin@gmail.com";
-		User user = repo.findByEmail(email);
+		Users user = repo.findByEmail(email);
 		
 		assertThat(user.getEmail()).isEqualTo(email);
 	}

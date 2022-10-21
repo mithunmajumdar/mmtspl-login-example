@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.mmtspl.bean.CustomUserDetails;
-import com.mmtspl.bean.User;
+import com.mmtspl.bean.Users;
 import com.mmtspl.repository.UserRepository;
 
 public class CustomUserDetailsService implements UserDetailsService {
@@ -16,7 +16,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepo.findByEmail(username);
+		Users user = userRepo.findByEmail(username);
 		if (user == null) {
 			throw new UsernameNotFoundException("User not found");
 		}
