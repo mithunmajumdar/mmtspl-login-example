@@ -1,5 +1,4 @@
 
-
 Database : MySQL
 
 SQL Queries : 
@@ -26,4 +25,5 @@ application.properties
 	
 Url
 
+>>>>>>> branch 'master' of https://github.com/mithunmajumdar/MMTSPL.git
    http://localhost:8000/	
