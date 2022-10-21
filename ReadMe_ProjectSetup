@@ -3,8 +3,8 @@ Database : MySQL
 
 SQL Queries : 
 
-    SQL>  create database employeedb;
-	SQL>  use employeedb;
+    SQL>  create database mmtspl_db;
+	SQL>  use mmtspl_db;
 	SQL>  show tables;
 	SQL>  select * from users;
 
@@ -25,5 +25,7 @@ application.properties
 	
 Url
 
->>>>>>> branch 'master' of https://github.com/mithunmajumdar/MMTSPL.git
    http://localhost:8000/	
+   
+   
+   
