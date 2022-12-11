@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mmtspl</groupId>
-	<artifactId>mmtspl-login-example</artifactId>
+	<artifactId>MMTSPL</artifactId>
 	<version>1.0</version>
-	<name>mmtspl-login-example</name>
+	<name>MMTSPL</name>
 	<description>MMTSPL registration (sign up) and Login (Sign in)</description>
 
 	<properties>

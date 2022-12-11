@@ -1,0 +1,31 @@
+
+Database : MySQL
+
+SQL Queries : 
+
+    SQL>  create database mmtspl_db;
+	SQL>  use mmtspl_db;
+	SQL>  show tables;
+	SQL>  select * from users;
+
+application.properties 
+	
+	make  spring.jpa.hibernate.ddl-auto=create    only for first time for creating User table in employeedb
+	
+
+Start up the application :
+	1. Build and Run the application using maven build
+	2. go to src->test-> UserRepositoryTests.java and run the testCreateUser() test case 
+	3. using right click Run As->JUnit  (This will create a User table in employeedb database)  	
+	
+	
+application.properties 
+	
+	make  spring.jpa.hibernate.ddl-auto=none    and rerun the application.
+	
+Url
+
+   http://localhost:8000/	
+   
+   
+   
